@@ -1,0 +1,80 @@
+{
+  "sim_days": 20000,
+  "food_filepath": "./daily_chla.csv",
+  "temp_filepath": "./daily_temp.csv",
+  "shoreline_len": 10,
+  "elevation_min": 0.0,
+  "elevation_max": 2,
+  "tides": {
+    "tidal_min": 0,
+    "tidal_max": 1.6,
+    "max_exposure": 12.0
+  },
+  "mussel_effect": {
+      "enable_mussel_temp_effect": true,
+      "mussel_temp_mode": "threshold",
+      "threshold_temp_shift": 0.792,
+      "max_cell_threshold": 15
+  },
+  "initial_conditions": {
+    "adult_density_coef": 60.04064,
+    "adult_density_exp": 3.068545,
+    "aggregation_coef": 63.71429,
+    "aggregation_exp": 3.767186
+    },
+   "agent_params": {
+    "larva": {
+      "survival": {
+        "mu0" : 0.02997092,
+        "b" : 0.73541000,
+        "c" : 0.01490399,
+        "K" : 10287.72869
+      },
+        
+      "growth": {
+          "larval_growth_base":0.0009236269,
+          "watertemp_coef":0.0003955809,
+          "food_coef":0.0000001079747
+                }
+    },
+    "juvenile": {
+      "survival": {
+        "base_juv_surv": 15.8751, 
+        "duration_juv_surv": -1.2219,        
+        "length_juv_surv": 7.125,           
+        "temp_juv_surv": -0.3921          
+      },
+      "growth": {
+          "juvenile_daily_growth": 0.026677178
+      }
+    },
+    "adult": {
+        "adult_daily_survival": 0.9998594,
+        "adult_start_day": 1000
+    },
+    "larval_supply": {
+        "larval_temp_min": 20, 
+        "larvae_base_rate": 5
+    },
+    "settlement": {
+        "min_size": 0.150,
+        "max_size": 0.350,
+        "development": {
+          "development_coef":0.01187,
+          "development_exp":0.08204
+        },
+        "settlement_exp": 1.809604,
+        "settlement_probability": 1
+    },
+    "maturation": {
+        "maturation_size": 20,
+        "space_limitation": {
+            "enabled": true,
+            "max_adults_per_cell": 60
+        }
+    }
+  },
+  "technical": {
+      "grid_resolution": 0.25
+  }
+}
