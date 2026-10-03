@@ -95,8 +95,6 @@ def calc_temp_grid(
     threshold_temp_shift = mussel_effect["threshold_temp_shift"]
     max_cell_threshold = mussel_effect["max_cell_threshold"]
     tidal_min = tides["tidal_min"]
-    tidal_max = tides["tidal_max"]
-
        
     # -------------------------
     # 1. Base temperature by elevation

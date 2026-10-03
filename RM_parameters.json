@@ -1,5 +1,5 @@
 {
-  "sim_days": 20000,
+  "sim_days": 15000,
   "food_filepath": "./daily_chla.csv",
   "temp_filepath": "./daily_temp.csv",
   "shoreline_len": 10,
@@ -54,7 +54,7 @@
     },
     "larval_supply": {
         "larval_temp_min": 20, 
-        "larvae_base_rate": 5
+        "larvae_base_rate": 10
     },
     "settlement": {
         "min_size": 0.150,
@@ -64,7 +64,7 @@
           "development_exp":0.08204
         },
         "settlement_exp": 1.809604,
-        "settlement_probability": 1
+        "settlement_probability": 0.075
     },
     "maturation": {
         "maturation_size": 20,

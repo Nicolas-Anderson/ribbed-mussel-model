@@ -51,7 +51,8 @@ def step(df_prev, config, grids, water_temp, air_temp, food, day, next_agent_id)
     # -------------------------
     df_prev, ddf = maturation(
         df_prev,
-        agent_param["maturation"]["maturation_size"]
+        agent_param["maturation"]["maturation_size"],
+        agent_param["maturation"]["space_limitation"]
     )
     pieces.append(ddf)
 
@@ -75,7 +76,6 @@ def step(df_prev, config, grids, water_temp, air_temp, food, day, next_agent_id)
     df_prev, ddf = settle(
         df_prev,
         agent_param["settlement"],
-        water_temp,
         shoreline_grid,
         elevation_grid,
         tides["tidal_min"],

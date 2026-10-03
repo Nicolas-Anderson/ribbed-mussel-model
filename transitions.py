@@ -65,7 +65,6 @@ def maturation(agents_df, maturation_size, space_limitation=None):
 def settle(
     agents_df,
     settlement_params,
-    water_temp,
     shoreline_grid,
     elevation_grid,
     tidal_min,
